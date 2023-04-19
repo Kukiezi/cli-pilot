@@ -16,19 +16,17 @@ pub enum Prompt {
     Explain(String),
 }
 
-const REVISION_PROMPT: &str =
-    "Update the following command based on what is asked in the following prompt";
-const EXPLAIN_PROMPT: &str =
-    "Describe the command in plain english, step by step, what exactly it does.
+const REVISION_PROMPT: &str = "Update the command based on what is asked in the prompt";
 
-Please describe succinctly, use as few words as possible, do not be verbose.
-If there are multiple steps, display them as a list.";
+const EXPLAIN_PROMPT: &str = "Describe what the command does by creating a list of steps and explaining each element in plain english.
+Use as few word as possible. 
+Do not explain what user has to do, but what each part of the command does.";
 
 impl Prompt {
     pub fn value(&self) -> String {
         match self {
             Prompt::Command(shell, os, prompt) => format!(
-                "I will give you a prompt to create a single line command that one can enter in a terminal and run, based on what is asked in the prompt.\
+                "Create a single line command based on what is asked in the prompt.\
                 \nThe target terminal is {}.\
                 \nPlease only reply with the single line command in plain text without Markdown formatting. It should be able to be directly run in a terminal. Do not include any other text.\
                 \nPlease make sure the script runs on {} operating system.\
@@ -47,7 +45,7 @@ impl Prompt {
             Prompt::Explain(command) => format!(
                 "{}
 
-                This is the script: {}",
+                This is the command: {}",
                 EXPLAIN_PROMPT, command
             ),
         }
