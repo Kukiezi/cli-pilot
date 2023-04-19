@@ -25,7 +25,7 @@ gpt <PROMPT>
 ```
 
 <p align="start">
-  <img src="https://raw.githubusercontent.com/Kukiezi/cli-pilot/main/assets/listfiels.gif" alt="animated" />
+  <img src="https://raw.githubusercontent.com/Kukiezi/cli-pilot/main/assets/listfiles.gif" alt="animated" />
 </p>
 
 ```
