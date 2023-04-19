@@ -1,6 +1,13 @@
 # CLI-Pilot
-
 CLI-Pilot is a Rust-based personal CLI assistant that uses OpenAI's GPT to generate CLI commands based on user prompts. It can also explain the generated command in plain English.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kukiezi/cli-pilot/main/assets/weather.gif" alt="animated" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Kukiezi/cli-pilot/main/assets/listfiels.gif" alt="animated" />
+</p>
 
 ## Installation
 
